@@ -202,7 +202,7 @@ this->открытьToolStripMenuItem->Size = System::Drawing::Size(150, 22);
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(12, 41);
 			this->label3->Name = L"label3";
-                  this->label3->Size = System::Drawing::Size(88, 13);
+                  	this->label3->Size = System::Drawing::Size(88, 13);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"Вид контейнера";
 			// 
@@ -325,7 +325,7 @@ this->button1->TabIndex = 17;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 
-// label10
+			// label10
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Location = System::Drawing::Point(135, 66);
@@ -1280,7 +1280,6 @@ int kol= 0;
 					FindVedElem(ocenki, matrixLIM, B, num_l, num_v, tetta, &nVedStolb, &nVedStrok);
 					str += "\nНомер ведущей строки: " + IntegerToSystemString(nVedStrok) + "\nНомер ведущего столбца: " + IntegerToSystemString(nVedStolb) + "\nB ="; for(int i = 0; i < num_l + num_v; i++) { str += StdStringToSystemString(B[i].toString()) + "  "; } str += "\n";
 					
-//MessageBox::Show(str);
 					Fraction VedElement = matrixLIM[nVedStrok][nVedStolb];
   					ConversionMatrix(matrixLIM, B, num_l, num_v, nVedStrok, nVedStolb, VedElement);
 					MassBass[num_v + nVedStrok] = StoimostVCel[nVedStolb];
@@ -1288,9 +1287,6 @@ int kol= 0;
 				}
 			}//цикл вайл флаг != тру
 		 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 private: bool CheckBoxNull(Fraction *NumBox, int NumberVariables)
 		 {
 			 bool flag = true;
@@ -1357,16 +1353,6 @@ private: System::Void сохранитьКакToolStripMenuItem_Click(System::Ob
 						//			 MessageBox::Show(StdStringToSystemString(TotalCost.toString()));
 				 }
 
-				 //MessageBox::Show(wchar_tToSysString(ConstWchToWchPtr(List->readStr(7,0))));
-	/*
-				 for(int i = 3; i < List->lastRow(); i++)
-				 {
-					 MessageBox::Show(ConstWchar_tToSysString(List->readStr(i,0)));
-	//				 if(ConstWchar_tToSysString(List->readStr(i,0)) == type)
-	//					 MessageBox::Show( "yeeee");
-	//				 else MessageBox::Show("nooo");
-				 }*/
-
 				 if(Pbook->save(StringToWchar_t(SaveDialog->FileName)))
 					 MessageBox::Show("Сохранено!");
 else MessageBox::Show("Ошибка. Не удалось сохраненить файл!");
@@ -1430,11 +1416,6 @@ using namespace System::Runtime::CompilerServices;
 using namespace System::Runtime::InteropServices;
 using namespace System::Security::Permissions;
 
-//
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
 [assembly:AssemblyTitleAttribute("SimplexForm")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
@@ -1444,17 +1425,6 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version
-//      Build Number
-//      Revision
-//
-// You can specify all the value or you can default the Revision and Build Numbers
-// by using the '*' as shown below:
-
 [assembly:AssemblyVersionAttribute("1.0.*")];
 
 [assembly:ComVisible(false)];
@@ -1462,8 +1432,6 @@ using namespace System::Security::Permissions;
 [assembly:CLSCompliantAttribute(true)];
 
 [assembly:SecurityPermission(SecurityAction::RequestMinimum, UnmanagedCode = true)];
-#include "stdafx.h"
-#include "fraction.h"
 
 
 double integer(double Number)
